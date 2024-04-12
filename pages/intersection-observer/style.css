@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+body {
+  color: #ffffff;
+  background-color: #131316;
+  font-family: "Caveat", cursive;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 101vh;
+}
+
+.hidden {
+  opacity: 0;
+  /* filter: blur(5px); */
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur();
+  transform: translateX(0);
+}
+
+.avatars {
+  display: flex;
+  gap: 2rem;
+  margin-block-start: 5rem;
+}
+.profile {
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: 390px;
+  border-radius: 20px;
+}
+.profile img {
+  position: absolute;
+}
+
+.profile:nth-child(1) {
+}
+.profile:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.profile:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.profile:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.profile:nth-child(1) img {
+  top: 0;
+  left: 0;
+}
+.profile:nth-child(2) img {
+  top: -380px;
+  left: 0;
+}
+.profile:nth-child(3) img {
+  top: 0;
+  left: -308px;
+}
+
+.profile:nth-child(4) img {
+  top: -375px;
+  left: -312px;
+}
